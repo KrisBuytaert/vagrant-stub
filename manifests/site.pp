@@ -1,0 +1,8 @@
+
+node default {
+
+  notify {"::$fqdn": }
+
+}
+
+
