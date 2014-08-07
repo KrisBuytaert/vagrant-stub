@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :misc do |misc_config|
     misc_config.ssh.max_tries = 100
     misc_config.vm.box = "Centos65"
-    misc_config.vm.network :hostonly, "192.168.99.101"
+    misc_config.vm.network "private_network", ip:  "192.168.99.101"
     misc_config.vm.host_name = "misc"
     misc_config.vm.provision :puppet do |misc_puppet|
       misc_puppet.manifests_path = "manifests"
